@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>RoomRush Studio</title>
+    <link rel="stylesheet" href="studio.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div id="studio">
+        <header>
+            <div class="logo">RR Studio</div>
+            <div class="actions">
+                <button id="btn-new">New Scene</button>
+                <button id="btn-save">Save.json</button>
+                <input type="file" id="btn-load" accept=".json" hidden>
+                <button id="btn-load-trigger">Load.json</button>
+                <button id="btn-play">Play Game</button>
+            </div>
+        </header>
+        <div class="main-container">
+            <div id="hierarchy"><h3>Hierarchy</h3><ul id="object-list"></ul></div>
+            <div id="scene-view"></div>
+            <div id="inspector"><h3>Inspector</h3><div id="inspector-content"><p>Selecione um objeto</p></div></div>
+        </div>
+        <div id="project"><h3>Project - Assets</h3><div id="asset-browser"></div></div>
+    </div>
+    <script src="studio.js"></script>
+</body>
+</html>

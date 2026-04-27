@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoomRush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="newChat">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/></svg>
+          Nova conversa
+        </button>
+      </div>
+      <div class="chat-list" id="history"></div>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar">R</div>
+          <span>RoomRush Dev</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <button class="icon-btn mobile-only" id="hamburger">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <h1 class="chat-title" id="chatTitle">RoomRush</h1>
+        <div class="header-actions">
+          <button class="icon-btn" id="themeToggle"><span class="theme-icon">🌙</span></button>
+          <button class="icon-btn" id="exportBtn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="chat-container" id="chatContainer"></div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea id="userInput" placeholder="Pergunte qualquer coisa..." rows="1"></textarea>
+          <button id="sendBtn" class="send-btn" disabled>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086L2.279 16.76a.75.75 0 00.95.826l16-5.333a.75.75 0 000-1.416l-16-5.333z"/></svg>
+          </button>
+          <button id="stopBtn" class="send-btn stop" style="display:none">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="6" y="6" width="8" height="8" rx="1"/></svg>
+          </button>
+        </div>
+        <div class="input-footer">
+          <span id="tokenCount"></span>
+          <span>RoomRush pode cometer erros. Verifique informações importantes.</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

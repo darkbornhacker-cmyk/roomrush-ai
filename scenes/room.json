@@ -1,0 +1,11 @@
+{
+  "objects": [
+    {
+      "name": "room_background",
+      "key": "room_background",
+      "x": 560,
+      "y": 80,
+      "depth": 2
+    }
+  ]
+}
